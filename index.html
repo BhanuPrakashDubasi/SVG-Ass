@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Animation Example</title>
+    <style>
+        /* Style for the rectangle */
+        rect {
+            fill: blue;
+            stroke: black;
+            stroke-width: 2;
+        }
+
+        /* Style for the circle */
+        circle {
+            stroke-width: 10;
+            fill: none;
+            stroke: red;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+            animation: draw 4s linear infinite;
+        }
+
+        /* Keyframes for the animation */
+        @keyframes draw {
+            0% { stroke-dashoffset: 300; }
+            100% { stroke-dashoffset: 0; }
+        }
+
+        /* Style for the last modified date */
+        .last-modified {
+            font-size: 14px;
+            color: gray;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <svg width="200" height="200">
+        <rect x="10" y="10" width="180" height="180" />
+        <circle cx="100" cy="100" r="80" />
+    </svg>
+    <div class="last-modified">Last modified: October 9, 2024</div>
+</body>
+</html>
